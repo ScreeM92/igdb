@@ -1,0 +1,310 @@
+// Header Styles
+.header-wrapper {
+    background-color: #222b39;
+    box-shadow: 0px 3px 10px grey;
+    header {
+        .header-container {
+            background-image: url("../images/index-background.jpg");
+            background-repeat: no-repeat;
+        }
+        .logo-wrapper {
+            margin-top: 40px;
+            display: inline-block;
+        }
+        .logo-name {
+            font-size: 12px;
+            font-family: "Georgia";
+            color: rgb(119, 128, 141);
+            font-style: italic;
+            text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.68);
+            margin-left: 10px;
+        }
+        .logo {
+            font-family: "Myriad Pro";
+            font-size: 48px;
+            color: #fefefe;
+            text-shadow: -3px -3px 0 #486a36, 3px -3px 0 #486a36, -3px 3px 0 #486a36, 3px 3px 0 #486a36;
+        }
+        #main-nav-wrap {
+            -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, .43);
+            -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, .43);
+            box-shadow: 1px 2px 3px rgba(0, 0, 0, .43);
+            border: solid 1px #111b27;
+            border-radius: 15px;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fafafa+50,d0d0d0+50 */
+            background: #fafafa;
+            /* Old browsers */
+            background: -moz-linear-gradient(top, #fafafa 50%, #d0d0d0 50%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #fafafa 50%, #d0d0d0 50%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #fafafa 50%, #d0d0d0 50%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            .nav-item {
+                .nav-link {
+                    font-family: "Droid Sans";
+                    font-style: normal;
+                    color: #292929;
+                    font-size: 12px;
+                }
+                .nav-link:hover {
+                    color: #9e9d9d !important;
+                }
+            }
+            .nav-link.active {
+                font-family: Georgia;
+                font-style: italic;
+                color: #9e9d9d;
+            }
+        }
+        .heading-category {
+            padding-bottom: 10px;
+            .heading-category-name {
+                font-family: "Goudy Bookletter 1911";
+                font-size: 48px;
+                color: #fff;
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, .63);
+            }
+            .heading-category-desc {
+                font-family: Georgia;
+                font-size: 18px;
+                font-style: italic;
+                color: #778292;
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, .63);
+            }
+        }
+    }
+}
+
+// END Header
+// Content
+main {
+    background-image: url("../images/content-background.png");
+    background-repeat: repeat;
+    padding: 3px;
+    .navi {
+        font-size: 12px;
+        font-family: "Droid Sans";
+        color: rgb(176, 175, 175);
+        line-height: 1.75;
+        text-align: left;
+        text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+    }
+    .wrapper-articles {
+        border-right: 1px solid rgba(117, 139, 141, 0.169);
+        -webkit-box-shadow: 1px 0 0 0 rgba(117, 139, 141, .23);
+        -moz-box-shadow: 1px 0 0 0 rgba(117, 139, 141, .23);
+        box-shadow: 1px 0 0 0 rgba(117, 139, 141, .23);
+        article {
+            padding-bottom: 25px;
+            header {
+                .article-header {
+                    font-size: 30px;
+                    font-family: "Goudy Bookletter 1911";
+                    color: rgb(117, 139, 141);
+                    line-height: 1.2;
+                    text-align: left;
+                    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+                }
+            }
+            footer {
+                .article-footer {
+                    font-size: 12px;
+                    font-family: "Georgia";
+                    color: rgb(162, 162, 162);
+                    font-style: italic;
+                    line-height: 1.75;
+                    text-align: left;
+                    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+                }
+            }
+            section {
+                display: flex;
+                .article-img {
+                    display: block;
+                }
+                .article-text {
+                    display: inline-block;
+                    font-size: 12px;
+                    font-family: "Droid Sans";
+                    color: rgb(140, 138, 138);
+                    line-height: 1.75;
+                    text-align: left;
+                    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+                }
+            }
+            .btn-read-more {
+                border: solid 1px #ebeaea;
+                border-radius: 10px;
+                padding: 2px 15px;
+                background-image: -webkit-linear-gradient(bottom, #ededed, #fff);
+                background-image: -moz-linear-gradient(bottom, #ededed, #fff);
+                background-image: -o-linear-gradient(bottom, #ededed, #fff);
+                background-image: -ms-linear-gradient(bottom, #ededed, #fff);
+                background-image: linear-gradient(to top, #ededed, #fff);
+                font-size: 11px;
+                font-family: "Droid Sans";
+                color: rgb(126, 146, 148);
+                line-height: 1.909;
+                text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+            }
+        }
+        .pagination {
+            display: block;
+            font-family: "Goudy Bookletter 1911";
+            text-shadow: 1px 1px #fff;
+            padding: 35px 50px 30px 0;
+            .pagination-pages {
+                font-size: 18px;
+                color: #8c8a8a;
+            }
+            .pagination-numbers {
+                font-size: 30px;
+                ul {
+                    display: inline-block;
+                    li {
+                        display: inline;
+                        color: rgb(117, 139, 141);
+                        line-height: 1.767;
+                        text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+                    }
+                    li.active {
+                        color: #c2c2c2;
+                    }
+                }
+            }
+        }
+    }
+    .wrapper-sidebar {
+        padding-left: 40px;
+        .sidebar-item {
+            .sidebar-item-title {
+                margin-bottom: 15px;
+                font-size: 24px;
+                font-family: "Goudy Bookletter 1911";
+                color: rgb(117, 139, 141);
+                line-height: 1.5;
+                text-align: left;
+                text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+            }
+            .sidebar-item-lists {
+                padding-left: 0px;
+                padding-bottom: 12px;
+                list-style-type: none;
+                .sidebar-item-list {
+                    margin-bottom: 20px;
+                    font-size: 12px;
+                    font-family: "Droid Sans";
+                    color: rgb(140, 138, 138);
+                    text-align: left;
+                    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+                }
+                .sidebar-item-list::before {
+                    content: url("../images/list-icon.png");
+                    margin-right: 12px;
+                }
+                .sidebar-item-list.active {
+                    color: #696969;
+                }
+                .sidebar-item-list:last-child {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+.wrapper-article {
+    background-image: url("../images/article-background.png");
+    background-repeat: repeat;
+    article {
+        section.news {
+            .logo {
+                font-family: "Myriad Pro";
+                font-size: 36px;
+                color: #fefefe;
+                text-shadow: -2px -2px 0 #486a36, 2px -2px 0 #486a36, -2px 2px 0 #486a36, 2px 2px 0 #486a36;
+                margin-bottom: 10px;
+            }
+            .news-img {
+                display: block;
+                margin: 5px 10px 10px 0;
+            }
+            .news-text {
+                font-size: 12px;
+                font-family: "Droid Sans";
+                color: rgb(174, 189, 209);
+                line-height: 1.75;
+                text-align: left;
+                text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+            }
+        }
+        section.games,
+        section.posts {
+            padding-left: 40px;
+            .section-item {
+                .section-item-title {
+                    margin-bottom: 15px;
+                    font-size: 24px;
+                    font-family: "Goudy Bookletter 1911";
+                    color: rgb(255, 255, 255);
+                    line-height: 1.5;
+                    text-align: left;
+                    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.004);
+                }
+                .section-item-lists {
+                    padding-left: 0px;
+                    padding-bottom: 12px;
+                    list-style-type: none;
+                    .section-item-list {
+                        margin-bottom: 20px;
+                        font-size: 12px;
+                        font-family: "Droid Sans";
+                        color: #aebdd1;
+                        text-align: left;
+                        text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+                    }
+                    .section-item-list::before {
+                        content: url("../images/list-icon.png");
+                        margin-right: 12px;
+                    }
+                    .section-item-list.active {
+                        color: rgb(255, 255, 255);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wrapper-footer {
+    background-image: url("../images/footer-background.png");
+    background-repeat: repeat;
+    footer {
+        .navbar-footer {
+            padding-left: 0px !important;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            .nav {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                .nav-link {
+                    padding-left: 0px !important;
+                    padding-right: 15px !important;
+                    font-size: 12px;
+                    text-shadow: 1px 1px 1px #000;
+                    font-family: "Droid Sans";
+                    color: #aebdd1;
+                    line-height: 3;
+                }
+                .nav-link.active {
+                    font-family: "Georgia";
+                    color: rgb(255, 255, 255);
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}
+
+// END Content
