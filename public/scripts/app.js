@@ -5,16 +5,19 @@ import popup from 'scripts/utils/pop-up.js';
 import 'jquery';
 import Tether from 'tether';
 import 'bootstrap';
+import 'slick';
 
 /* Controllers */
 import UserController from 'scripts/controllers/UserController.js';
 // import BookController from 'scripts/controllers/bookController.js';
 import IndexController from 'scripts/controllers/IndexController.js';
+import HomeController from 'scripts/controllers/HomeController.js';
 
 /* Create controller instance */
 let UserContr = new UserController();
 // let BC = new BookController();
 let IndexContr = new IndexController();
+let HomeContr = new HomeController();
 
 let app = new Sammy('#sammy-app');
 
@@ -105,6 +108,22 @@ app.get('#/', function(con) {
     IndexContr.index(con)
         .then(() => {
             SetActiveLink('/');
+        });
+
+    // BC.getRandom()
+    //     .then((book) => {
+    //         BC.attachToTemplate(book, 'home')
+    //             .then(html => {
+    //                 con.swap(html);
+    //             });
+    //     });
+});
+
+app.get('#home/', function(con) {
+    console.log(con);
+    HomeContr.index(con)
+        .then(() => {
+            SetActiveLink('/home');
         });
 
     // BC.getRandom()
@@ -233,19 +252,26 @@ app.run('#/');
 //     $("#dropdown-cart").css('display', 'none');
 // });
 
-var nav = $('#main-nav');
-
-nav.on('click', 'a', ev => {
-    var element = $(ev.target);
-
-    nav.find('a').removeClass('active');
-    element.addClass('active');
-});
-
-
-function SetActiveLink(name) {
+$(document).ready(function() {
     var nav = $('#main-nav');
-    nav.find('a').removeClass('active');
+    var navBtn = $('#nav-btn');
 
-    nav.find('a[href="#' + name + '"]').addClass('active');
-}
+    nav.on('click', 'a', ev => {
+        var element = $(ev.target);
+
+        nav.find('a').removeClass('active');
+        element.addClass('active');
+    });
+
+    navBtn.on('click', ev => {
+        var element = $(ev.target);
+        $('#main-nav-wrap').css('width', '25% !important');
+    });
+
+    function SetActiveLink(name) {
+        var nav = $('#main-nav');
+        nav.find('a').removeClass('active');
+
+        nav.find('a[href="#' + name + '"]').addClass('active');
+    }
+});

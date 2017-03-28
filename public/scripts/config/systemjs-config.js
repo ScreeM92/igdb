@@ -10,6 +10,7 @@ SystemJS.config({
         'bootstrap': '../bower_components/bootstrap/dist/js/bootstrap.min.js',
         'sammy': '../bower_components/sammy/lib/min/sammy-latest.min.js',
         'handlebars': '../bower_components/handlebars/handlebars.min.js',
+        'slick': '../bower_components/slick/slick/slick.min.js',
         'template': '../scripts/data/handlebars-template.js',
         'requester': '../scripts/data/requester.js',
     },

@@ -4,8 +4,6 @@ import 'jquery';
 
 class IndexController {
 
-    constructor() {}
-
     index(context) {
         Promise.all([template.get('index-header'), template.get('index'), template.get('article'), template.get('footer')])
             .then(([header, content, article, footer]) => {

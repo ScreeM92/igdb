@@ -1,50 +1,51 @@
-<header class="container ">
-    <div class="menu-user">
-        <div id="fb-share" class="fb-like" data-href="https://cdn.rawgit.com/Team-Namor/Book-Store/master/public/index.html" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true">
-        </div>
-        <ul id="menu-user" class="col-xs-12 col-sm-12 col-md-8 col-lg-6 pull-xs-right">
-            <li id="cart-btn" class="col-xs-6 col-sm-4 pull-xs-left menu-user-cart">
-                <a class="btn btn-info" href="#cart">
-                    <i class="fa fa-shopping-cart"></i> Cart
-                    <span class="total">$0.00</span>
-                </a>
-                <div id="dropdown-cart">
-
-                </div>
-            </li>
-            <li id="menu-user-login" class="col-xs-3 col-sm-3 pull-xs-right menu-user-login">
-                <a class="btn btn-info" href="#Login">Login</a>
-            </li>
-            <li id="menu-user-register" class="col-xs-4 col-sm-3 pull-xs-right menu-user-register">
-                <a class="btn btn-danger" href="#Register">Register</a>
-            </li>
-            <li id="menu-user-logout" class="col-xs-4 col-sm-3 pull-xs-right menu-user-logout">
-                <a class="btn btn-danger" href="#Logout">Logout</a>
-            </li>
-        </ul>
-    </div>
-    <div class="menu-main-wrap">
-        <div class="logo col-xs-3">
-            <h1 class="display-1">
-                <a href="/#/">
-                    <img src="style/images/logo_light.png" alt="logo" />
-                </a>
-            </h1>
-        </div>
-        <button id="mobile-nav-trigger" class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#main-nav-wrap" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-            &#9776;
-        </button>
-        <nav id="main-nav-wrap" class="container navbar col-xs-9 collapse navbar-toggleable-sm">
+<div class="header-wrapper">
+    <header class="home">
+        <div class="container header-container">
+            {{!--First row--}}
             <div class="row">
-                <ul id="main-nav" class="nav nav-pills pull-right">
-                    <li class="nav-item"><a href="#/" class="background-transparent nav-link">Home</a></li>
-                    <li class="nav-item "><a href="#books/page/1" class="background-transparent nav-link">Books</a></li>
-                    <!--<li class="nav-item"><a href="#categories" class="background-transparent nav-link">Categories</a></li>-->
-                    <li class="nav-item"><a href="#promotion" class="background-transparent nav-link">Promotion</a></li>
-                    <li class="nav-item"><a href="#contacts" class="background-transparent nav-link">Contact us</a></li>
-                    <li id="admin-nav-item" style="display:none" class="nav-item"><a href="#admin" class="background-transparent nav-link">Admin</a></li>
-                </ul>
+                <div class="wrapper-logo col-xl-6 col-lg-4 col-md-4 col-sm-6 col-xs-12 mt-40 mb-90">
+                    <div class="row no-gutters">
+                        <div>
+                            <a class="logo" href="/#/">IGDb</a>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="logo-name w-100">Internet Game Database</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper-navbar col-xl-6 col-lg-8 col-md-8 col-sm-6 col-xs-12 mt-40 mb-90">
+                    <nav id="main-nav-wrap" class="navbar navbar-fixed-top navbar-toggleable-md navbar-light bg-faded">
+                        <button id="nav-btn" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+                            ☰
+                        </button>
+
+                        <div class="row wrapper-collapse">
+                            <div class="collapse navbar-collapse" id="exCollapsingNavbar2">
+                                <ul id="main-nav" class="nav navbar-nav ml-auto pull-right">
+                                    <li class="nav-item ml-10"><a href="#home/" class="nav-link active">Home</a></li>
+                                    <li class="nav-item"><a href="#news/page/1" class="nav-link">News</a></li>
+                                    <li class="nav-item"><a href="#games/page/1" class="nav-link">Games</a></li>
+                                    <li class="nav-item"><a href="#users" class="nav-link">Users</a></li>
+                                    <li class="nav-item"><a href="#contacts" class="nav-link">Contact us</a></li>
+                                    <li class="nav-item"><a href="#about" class="nav-link">About us</a></li>
+                                    <li class="nav-item"><a href="#login" class="nav-link">Login</a></li>
+                                    <li class="nav-item"><a href="#register" class="nav-link">Register</a></li>
+                                    <li id="admin-nav-item" class="nav-item" style="display: none;">
+                                        <a href="#admin" class="nav-link">Admin</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
             </div>
-        </nav>
-    </div>
-</header>
+            {{!--Second row--}}
+            <div class="row no-gutters heading-slider">
+                <div class="slick">
+                    <div><h3>We are the best website for Games</h3></div>
+                    <div><h3>We update our data for games live</h3></div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>

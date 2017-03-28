@@ -53,8 +53,10 @@
                 margin-bottom: 20px !important;
                 margin-top: 20px !important;
             }
-            .nav-link {
-                padding: 5px 10px;
+            footer {
+                .nav-link {
+                    padding: 5px 10px;
+                }
             }
             .heading-category-name {
                 font-size: 36px !important;
@@ -99,6 +101,25 @@
             }
         }
         
-        @media (max-width: 991px) {}
+        @media (max-width: 991px) {
+            #main-nav-wrap {
+                width: 100% !important;
+            }
+            #main-nav {
+                margin-top: 35px;
+                li .nav-link {
+                    font-size: 14px !important;
+                    margin-left: 10px;
+                    // text-align: center;
+                }
+                li:first-child {
+                    margin-left: 0px !important;
+                }
+            }
+        }
         
-        @media only screen and (min-width: 992px) and (max-width: 1200px) {}
+        @media (max-width: 1200px) and (min-width: 991px) {
+            // #main-nav-wrap {
+            //     width: 77% !important;
+            // }
+        }
