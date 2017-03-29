@@ -3,7 +3,7 @@
         <div class="container header-container">
             {{!--First row--}}
             <div class="row">
-                <div class="wrapper-logo col-xl-6 col-lg-4 col-md-4 col-sm-6 col-xs-12 mt-40 mb-90">
+                <div class="wrapper-logo col-xl-6 col-lg-4 col-md-4 col-sm-6 col-xs-12 mt-40 mb-130">
                     <div class="row no-gutters">
                         <div>
                             <a class="logo" href="/#/">IGDb</a>
@@ -13,7 +13,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="wrapper-navbar col-xl-6 col-lg-8 col-md-8 col-sm-6 col-xs-12 mt-40 mb-90">
+                <div class="wrapper-navbar col-xl-6 col-lg-8 col-md-8 col-sm-6 col-xs-12 mt-40 mb-130">
                     <nav id="main-nav-wrap" class="navbar navbar-fixed-top navbar-toggleable-md navbar-light bg-faded">
                         <button id="nav-btn" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
                             ☰
@@ -40,10 +40,38 @@
                 </div>
             </div>
             {{!--Second row--}}
-            <div class="row no-gutters heading-slider">
-                <div class="slick">
-                    <div><h3>We are the best website for Games</h3></div>
-                    <div><h3>We update our data for games live</h3></div>
+            <div class="row no-gutters">
+                <div class="heading-slider w-100">
+                    <div id="slides">
+                        <a id="prev"></a> 
+                        <ul>
+                            <li class="slide">
+                                <h1>We are the best website for Games1</h1>
+                                <h3>Do you like playing games?</h3>
+                            </li>
+                            <li class="slide">
+                                <h1>We are the best website for Games2</h1>
+                                <h3>Do you like playing games?</h3>
+                            </li>
+                            <li class="slide">
+                                <h1>We are the best website for Games3</h1>
+                                <h3>Do you like playing games?</h3>
+                            </li>
+                        </ul>
+                        <a id="next"></a>
+                    </div>
+                    
+                </div>
+            </div>
+            {{!--Third row--}}
+            <div class="row no-gutters heading-buttons">
+                <div class="d-flex justify-content-center w-100">
+                    <div class="align-self-center heading-button heading-first-button">
+                        <button class="heading-button-text">Register!</button>
+                    </div>
+                    <div class="align-self-center ml-5 heading-button">
+                        <button class="heading-button-text">Login!</button>
+                    </div>
                 </div>
             </div>
         </div>
