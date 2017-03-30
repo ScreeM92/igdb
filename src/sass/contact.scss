@@ -1,0 +1,44 @@
+.wrapper-contact {
+    /*Contact sectiom*/
+    .content-header {
+        font-family: 'Oleo Script', cursive;
+        color: #758b8d;
+        font-size: 45px;
+    }
+    .section-content {
+        text-align: center;
+    }
+    #contact {
+        font-family: 'Teko', sans-serif;
+        padding-top: 60px;
+        width: 100%;
+        width: 100vw;
+        color: #758b8d
+    }
+    .contact-section {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    .form-line {
+        border-right: 1px solid #B29999;
+    }
+    .form-group {
+        margin-top: 10px;
+    }
+    label {
+        font-size: 1.3em;
+        line-height: 1em;
+        font-weight: normal;
+    }
+    .form-control {
+        font-size: 1.3em;
+        color: #080808;
+    }
+    textarea.form-control {
+        height: 135px;
+    }
+    .submit {
+        font-size: 1.1em;
+        float: right;
+    }
+}

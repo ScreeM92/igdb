@@ -1,125 +1,155 @@
-        /* Media Queries 768 - 1024 */
-        
-        @media (max-width: 480px) {
-            // #user-nav li:nth-child(2) {
-            //     display: none;
-            // }
-            // .visible-mobile {
-            //     display: block !important;
-            // }
-            // .page-headercontainer-heading h1,
-            // .about-section .panel-info h1 {
-            //     font-size: 30px !important;
-            // }
-            // .page-headercontainer-heading h4 {
-            //     font-size: 20px !important;
-            // }
-            // .sidebar-item-list {
-            //     width: 100% !important;
-            // }
-            // .section-item-lists {
-            //     padding-bottom: 0 !important;
-            // }
-            .wrapper-article .games,
-            .wrapper-article .posts {
-                padding-top: 20px !important;
-                padding-left: 100px !important;
-            }
-            .recent-games .sidebar-item-lists .sidebar-item-list,
-            .recent-posts .sidebar-item-lists .sidebar-item-list,
-            .recent-comments .sidebar-item-lists .sidebar-item-list {
+    /* Media Queries 480 - 1200 */
+    
+    @media (max-width: 1200px) and (min-width: 991px) {
+        .wrapper-videos .video {
+            iframe {
                 width: 100%;
             }
         }
-        
-        @media (max-width: 576px) {
-            .wrapper-article .games {
-                padding-top: 20px !important;
+        .header-wrapper header #main-nav-wrap {
+            width: 76%;
+        }
+    }
+    
+    @media (max-width: 991px) {
+        #main-nav-wrap {
+            width: 100% !important;
+        }
+        #main-nav {
+            margin-top: 35px;
+            li .nav-link {
+                font-size: 14px !important;
+                margin-left: 10px;
             }
-            .wrapper-article article section.games .section-item .section-item-lists,
-            .wrapper-article article section.posts .section-item .section-item-lists {
-                padding-bottom: 12px;
-            }
-            .wrapper-article .games,
-            .wrapper-article .posts,
-            .wrapper-sidebar {
-                padding-left: 0px !important;
+            li:first-child {
+                margin-left: 0px !important;
             }
         }
-        
-        @media (max-width: 768px) {
-            .wrapper-logo,
-            .wrapper-navbar {
-                margin-bottom: 20px !important;
-                margin-top: 20px !important;
+        .slide {
+            h1 {
+                font-size: 32px !important;
             }
-            footer {
-                .nav-link {
-                    padding: 5px 10px;
-                }
+            h3 {
+                font-size: 18px !important;
             }
-            .heading-category-name {
-                font-size: 36px !important;
-            }
-            .heading-category-desc {
-                font-size: 16px !important;
-            }
-            .article-header {
+        }
+        .header-wrapper .home .heading-buttons {
+            top: 25px;
+            .heading-button-text {
+                padding: 15px !important;
                 font-size: 24px !important;
             }
-            .wrapper-articles {
-                border-right: none !important;
-                box-shadow: none !important;
-                -webkit-box-shadow: none !important;
-                -moz-box-shadow: none !important;
-                border-bottom: 1px solid rgba(117, 139, 141, 0.169);
-                -webkit-box-shadow: 1px 0 0 0 rgba(117, 139, 141, .23);
-                -moz-box-shadow: 1px 0 0 0 rgba(117, 139, 141, .23);
-                box-shadow: 1px 0 0 0 rgba(117, 139, 141, .23);
-                margin-bottom: 20px !important;
-            }
-            .article-img {
-                margin: 0 10px 10px 0 !important;
-            }
-            .wrapper-sidebar {
-                padding-left: 10px !important;
-            }
-            .sidebar-item-title,
-            .sidebar-item-list {
-                text-align: center !important;
-            }
-            .sidebar-item-list {
-                text-align: left !important;
-                display: inline-block;
-                width: 49.5%;
-            }
-            .wrapper-article .games .section-item-lists {
-                padding-bottom: 0px !important;
-            }
-            main .wrapper-sidebar {
-                padding-left: 0px;
-            }
         }
-        
-        @media (max-width: 991px) {
-            #main-nav-wrap {
+        .video {
+            margin: 0px !important;
+            iframe {
                 width: 100% !important;
             }
-            #main-nav {
-                margin-top: 35px;
-                li .nav-link {
-                    font-size: 14px !important;
-                    margin-left: 10px;
-                    // text-align: center;
-                }
-                li:first-child {
-                    margin-left: 0px !important;
-                }
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .wrapper-logo,
+        .wrapper-navbar {
+            margin-bottom: 20px !important;
+            margin-top: 20px !important;
+        }
+        footer {
+            .nav-link {
+                padding: 5px 10px;
             }
         }
-        
-        @media (max-width: 1200px) and (min-width: 991px) {
-            // #main-nav-wrap {
-            //     width: 77% !important;
-            // }
+        .heading-category-name {
+            font-size: 36px !important;
         }
+        .heading-category-desc {
+            font-size: 16px !important;
+        }
+        .article-header {
+            font-size: 24px !important;
+        }
+        .wrapper-articles {
+            border-right: none !important;
+            box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            -moz-box-shadow: none !important;
+            border-bottom: 1px solid rgba(117, 139, 141, 0.169);
+            -webkit-box-shadow: 1px 0 0 0 rgba(117, 139, 141, .23);
+            -moz-box-shadow: 1px 0 0 0 rgba(117, 139, 141, .23);
+            box-shadow: 1px 0 0 0 rgba(117, 139, 141, .23);
+            margin-bottom: 20px !important;
+        }
+        .article-img {
+            margin: 0 10px 10px 0 !important;
+        }
+        .wrapper-sidebar {
+            padding-left: 10px !important;
+        }
+        .sidebar-item-title,
+        .sidebar-item-list {
+            text-align: center !important;
+        }
+        .sidebar-item-list {
+            text-align: left !important;
+            display: inline-block;
+            width: 49.5%;
+        }
+        .wrapper-article .games .section-item-lists {
+            padding-bottom: 0px !important;
+        }
+        main .wrapper-sidebar {
+            padding-left: 0px;
+        }
+        .slide {
+            h1 {
+                font-size: 24px !important;
+            }
+            h3 {
+                font-size: 18px !important;
+            }
+        }
+        .header-wrapper .home .heading-buttons {
+            top: 20px !important;
+            .heading-button-text {
+                padding: 10px !important;
+                font-size: 16px;
+            }
+        }
+        .wrapper-home-footer span {
+            font-size: 16px;
+        }
+        .form-line {
+            border-right: none !important;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .wrapper-article .games {
+            padding-top: 20px !important;
+        }
+        .wrapper-article article section.games .section-item .section-item-lists,
+        .wrapper-article article section.posts .section-item .section-item-lists {
+            padding-bottom: 12px;
+        }
+        .wrapper-article .games,
+        .wrapper-article .posts,
+        .wrapper-sidebar {
+            padding-left: 0px !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .wrapper-article .games,
+        .wrapper-article .posts {
+            padding-top: 20px !important;
+            padding-left: 0px !important;
+        }
+        .recent-games .sidebar-item-lists .sidebar-item-list,
+        .recent-posts .sidebar-item-lists .sidebar-item-list,
+        .recent-comments .sidebar-item-lists .sidebar-item-list {
+            width: 100%;
+        }
+        .wrapper-home-footer span {
+            font-size: 13px;
+        }
+    }

@@ -3,10 +3,10 @@ import template from 'template';
 import 'jquery';
 import 'slick';
 
-class HomeController {
+class LoginController {
 
     index(context) {
-        return Promise.all([template.get('home-header'), template.get('home'), template.get('article'), template.get('footer')])
+        return Promise.all([template.get('home-header'), template.get('login'), template.get('article'), template.get('footer')])
             .then(([header, content, article, footer]) => {
                 let html = header() + content() + article() + footer();
                 context.swap(html);
@@ -14,4 +14,4 @@ class HomeController {
     }
 }
 
-export default HomeController;
+export default LoginController;

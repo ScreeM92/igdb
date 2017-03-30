@@ -12,12 +12,24 @@ import UserController from 'scripts/controllers/UserController.js';
 // import BookController from 'scripts/controllers/bookController.js';
 import IndexController from 'scripts/controllers/IndexController.js';
 import HomeController from 'scripts/controllers/HomeController.js';
+import ContactController from 'scripts/controllers/ContactController.js';
+import LoginController from 'scripts/controllers/LoginController.js';
+import RegisterController from 'scripts/controllers/RegisterController.js';
+import AboutController from 'scripts/controllers/AboutController.js';
+import GamesController from 'scripts/controllers/GamesController.js';
+import NewsController from 'scripts/controllers/NewsController.js';
 
 /* Create controller instance */
 let UserContr = new UserController();
 // let BC = new BookController();
 let IndexContr = new IndexController();
 let HomeContr = new HomeController();
+let ContactContr = new ContactController();
+let LoginContr = new LoginController();
+let RegisterContr = new RegisterController();
+let AboutContr = new AboutController();
+let GamesContr = new GamesController();
+let NewsContr = new NewsController();
 
 let app = new Sammy('#sammy-app');
 
@@ -103,6 +115,20 @@ let app = new Sammy('#sammy-app');
 //     }
 // });
 
+// Login Click
+app.bind('click', function(ev) {
+    if (ev.target.id === 'btn-login') {
+        app.setLocation(`#login/`);
+    }
+});
+
+// Register Click
+app.bind('click', function(ev) {
+    if (ev.target.id === 'btn-register') {
+        app.setLocation(`#register/`);
+    }
+});
+
 app.get('#/', function(con) {
 
     IndexContr.index(con)
@@ -122,16 +148,85 @@ app.get('#/', function(con) {
 app.get('#home/', function(con) {
     HomeContr.index(con)
         .then(() => {
-            SetActiveLink('/home');
+            SetActiveLink('home/');
         });
+});
 
-    // BC.getRandom()
-    //     .then((book) => {
-    //         BC.attachToTemplate(book, 'home')
-    //             .then(html => {
-    //                 con.swap(html);
-    //             });
-    //     });
+app.get('#contact/', function(con) {
+    ContactContr.index(con)
+        .then(() => {
+            SetActiveLink('contact/');
+        });
+});
+
+// app.get('#login/', function(con) {
+//     LoginContr.index(con)
+//         .then(() => {
+//             SetActiveLink('/login');
+//         });
+// });
+
+/* Register user */
+app.get('#register/', con => {
+    RegisterContr.index(con)
+        .then(() => {
+            SetActiveLink('register/');
+        });
+});
+
+app.post('#register/', con => {
+    UserContr.add(con);
+});
+
+/* Login user */
+app.get('#login/', con => {
+    LoginContr.index(con)
+        .then(() => {
+            SetActiveLink('login/');
+        });
+});
+
+app.post('#login', con => {
+    UserContr.login(con);
+});
+
+/* Logout user */
+app.get("#logout", con => {
+    UserContr.logout(con);
+});
+
+app.get("#about/", con => {
+    AboutContr.index(con)
+        .then(() => {
+            SetActiveLink('about/');
+        });
+});
+
+app.get('#games/page/?:page', con => {
+    let page = +con.params.page;
+    GamesContr.index(page)
+        .then(html => {
+            con.swap(html);
+            SetActiveLink('games/page/1');
+        });
+});
+
+app.get('#news/page/?:page', con => {
+    let page = +con.params.page;
+    NewsContr.index(page)
+        .then(html => {
+            con.swap(html);
+            SetActiveLink('news/page/1');
+        });
+});
+
+app.get('#users/page/?:page', con => {
+    // let page = +con.params.page;
+    UsersContr.index(con)
+        .then(html => {
+            con.swap(html);
+            SetActiveLink('users/page/1');
+        });
 });
 
 // app.get('#books/page/?:page', con => {
@@ -267,13 +362,6 @@ $(document).ready(function() {
         $('#main-nav-wrap').css('width', '25% !important');
     });
 
-    function SetActiveLink(name) {
-        var nav = $('#main-nav');
-        nav.find('a').removeClass('active');
-
-        nav.find('a[href="#' + name + '"]').addClass('active');
-    }
-
     //rotation speed and timer
     var speed = 5000;
 
@@ -340,3 +428,10 @@ $(document).ready(function() {
     }
 
 });
+
+function SetActiveLink(name) {
+    var nav = $('#main-nav');
+    nav.find('a').removeClass('active');
+
+    nav.find('a[href="#' + name + '"]').addClass('active');
+}

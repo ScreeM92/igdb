@@ -9,7 +9,7 @@ class UserController {
             .then(success => popUp.info('Successfully registered!'))
             .then(() => {
                 setTimeout(function() {
-                    userContext.redirect('#books/page/1')
+                    userContext.redirect('#games/page/1')
                 }, 1000)
             })
             .catch(err => popUp.alert(err.responseText))

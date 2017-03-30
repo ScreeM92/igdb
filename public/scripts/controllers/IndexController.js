@@ -5,7 +5,7 @@ import 'jquery';
 class IndexController {
 
     index(context) {
-        Promise.all([template.get('index-header'), template.get('index'), template.get('article'), template.get('footer')])
+        return Promise.all([template.get('index-header'), template.get('index'), template.get('article'), template.get('footer')])
             .then(([header, content, article, footer]) => {
                 let html = header() + content() + article() + footer();
                 context.swap(html);

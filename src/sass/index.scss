@@ -90,17 +90,6 @@
                 position: relative;
                 width: 100%;
                 height: 250px;
-                // #prev,
-                // #next {
-                //     -webkit-box-shadow: 1px 1px rgba(255, 255, 255, .09), inset 1px 2px 4px rgba(0, 0, 0, .41);
-                //     -moz-box-shadow: 1px 1px rgba(255, 255, 255, .09), inset 1px 2px 4px rgba(0, 0, 0, .41);
-                //     box-shadow: 1px 1px rgba(255, 255, 255, .09), inset 1px 2px 4px rgba(0, 0, 0, .41);
-                //     background-image: -webkit-linear-gradient(bottom, #1d2634, #1c2535);
-                //     background-image: -moz-linear-gradient(bottom, #1d2634, #1c2535);
-                //     background-image: -o-linear-gradient(bottom, #1d2634, #1c2535);
-                //     background-image: -ms-linear-gradient(bottom, #1d2634, #1c2535);
-                //     background-image: linear-gradient(to top, #1d2634, #1c2535);
-                // }
                 #prev:before {
                     content: url("../images/left-arraw.png");
                 }
@@ -152,7 +141,7 @@
         }
         .heading-buttons {
             position: relative;
-            top: 27px;
+            top: 28px;
             .heading-first-button {
                 margin-right: 5px !important;
             }
@@ -163,8 +152,13 @@
                     -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, .49);
                     box-shadow: 0 2px 3px rgba(0, 0, 0, .49);
                     border-radius: 10px;
-                    background-color: #538b90;
                     border: 1px solid #538b90;
+                    /* Old browsers */
+                    background: -moz-linear-gradient(top, #5a959c 50%, #477d81 50%);
+                    /* FF3.6-15 */
+                    background: -webkit-linear-gradient(top, #5a959c 50%, #477d81 50%);
+                    /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(to bottom, #5a959c 50%, #477d81 50%);
                     font-size: 30px;
                     font-family: "Goudy Bookletter 1911";
                     color: rgb(255, 255, 255);
@@ -191,7 +185,18 @@ main {
         text-align: left;
         text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
     }
-    .wrapper-articles {
+    .wrapper-games,
+    .wrapper-news {
+        h1 {
+            color: #778292;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+    }
+    .wrapper-articles,
+    .wrapper-games-articles,
+    .wrapper-news-articles {
         border-right: 1px solid rgba(117, 139, 141, 0.169);
         -webkit-box-shadow: 1px 0 0 0 rgba(117, 139, 141, .23);
         -moz-box-shadow: 1px 0 0 0 rgba(117, 139, 141, .23);
@@ -233,21 +238,6 @@ main {
                     text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
                 }
             }
-            .btn-read-more {
-                border: solid 1px #ebeaea;
-                border-radius: 10px;
-                padding: 2px 15px;
-                background-image: -webkit-linear-gradient(bottom, #ededed, #fff);
-                background-image: -moz-linear-gradient(bottom, #ededed, #fff);
-                background-image: -o-linear-gradient(bottom, #ededed, #fff);
-                background-image: -ms-linear-gradient(bottom, #ededed, #fff);
-                background-image: linear-gradient(to top, #ededed, #fff);
-                font-size: 11px;
-                font-family: "Droid Sans";
-                color: rgb(126, 146, 148);
-                line-height: 1.909;
-                text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
-            }
         }
         .pagination {
             display: block;
@@ -264,9 +254,11 @@ main {
                     display: inline-block;
                     li {
                         display: inline;
-                        color: rgb(117, 139, 141);
-                        line-height: 1.767;
-                        text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+                        a {
+                            line-height: 1.767;
+                            color: rgb(117, 139, 141);
+                            text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+                        }
                     }
                     li.active {
                         color: #c2c2c2;
@@ -309,6 +301,44 @@ main {
                 .sidebar-item-list:last-child {
                     margin-bottom: 10px;
                 }
+            }
+        }
+    }
+    .wrapper-home {
+        article {
+            header {
+                .home-article-header {
+                    font-size: 24px;
+                    font-family: "Goudy Bookletter 1911";
+                    color: rgb(117, 139, 141);
+                    line-height: 1.5;
+                    text-align: left;
+                    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+                }
+            }
+            section.home-news {
+                .home-news-img {
+                    display: block;
+                    margin: 5px 10px 10px 0;
+                }
+                .home-news-text {
+                    font-size: 12px;
+                    font-family: "Droid Sans";
+                    color: rgb(140, 138, 138);
+                    line-height: 1.75;
+                    text-align: left;
+                    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+                }
+            }
+        }
+        .wrapper-videos {
+            background-image: url("../images/videos-background.png");
+            background-repeat: repeat;
+            background-color: #dcdcdc;
+            border: 1px solid #b7b7b7;
+            border-radius: 15px;
+            .video {
+                margin: 15px;
             }
         }
     }
@@ -376,6 +406,28 @@ main {
             }
         }
     }
+}
+
+.wrapper-home-footer {
+    background-color: #ffffff;
+    span {
+        font-size: 24px;
+        font-family: "Goudy Bookletter 1911";
+        color: rgb(151, 151, 151);
+        line-height: 2.208;
+        text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+    }
+    #home-footer-btn {
+        position: relative;
+        bottom: 5px;
+        margin-left: 20px;
+    }
+}
+
+.wrapper-home-footer::after {
+    content: url("../images/home-footer-arrow.png");
+    position: absolute;
+    left: 50%;
 }
 
 .wrapper-footer {
