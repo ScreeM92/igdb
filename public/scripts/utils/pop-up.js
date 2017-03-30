@@ -18,18 +18,18 @@ let popUp = {
     info(text) {
         $('body').append(popUpDiv);
         popUpDiv.text(text);
-        popUpDiv.css('background-color', 'green')
-        popUpDiv.show(500)
+        popUpDiv.css('background-color', 'green');
+        popUpDiv.show(500);
 
-        setTimeout(() => { popUpDiv.hide(1000) }, 2000);
+        setTimeout(() => { popUpDiv.hide(1000); }, 2000);
     },
     alert(text) {
         $('body').append(popUpDiv);
         popUpDiv.text(text);
-        popUpDiv.css('background-color', 'red')
-        popUpDiv.show(500)
+        popUpDiv.css('background-color', 'red');
+        popUpDiv.show(500);
 
-        setTimeout(() => { popUpDiv.hide(1000) }, 2000);
+        setTimeout(() => { popUpDiv.hide(1000); }, 2000);
     }
 }
 
